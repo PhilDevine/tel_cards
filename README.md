@@ -26,4 +26,4 @@ The development server will now be running at http://localhost:1234. To see wall
 `yarn deploy` or if you don't have yarn, `npm run deploy`
 
 ## Note: 
-functionality added (a) nabvagable tags, (b) copy URL button of TEL CARD and (c) accesbility tab (not fully tested) 
+Functionality added in this fork (a) nabvagable tags, (b) 'copy' URL button for a TEL CARD, and (c) accesbility tab (not fully tested) 

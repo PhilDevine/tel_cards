@@ -24,3 +24,6 @@ The development server will now be running at http://localhost:1234. To see wall
 
 ## Deploy the built bundle and assets to github pages
 `yarn deploy` or if you don't have yarn, `npm run deploy`
+
+## Note: 
+functionality added (a) nabvagable tags, (b) copy URL button of TEL CARD and (c) accesbility tab (not fully tested) 

@@ -5,7 +5,7 @@
                 <i class="far fa-plus-square" aria-hidden="true"></i>
             </div>
             <h4>Contribute</h4>
-            <p>Help others discover new technologies by telling us about the apps you use.</p>
+            <p>Help others discover digital learning by telling us about the apps you use and the people you meet.</p>
             <p class="instruction">Complete the form below and we'll be in touch to discuss creating a custom card for your suggestion.</p>
         </div>
         <div class="bs-callout bs-thanks clearfix" id="thankyou_message">
@@ -28,7 +28,7 @@
             <input class="form-control" id="location" name="location" aria-describedby="emailHelp" placeholder="">
             </div>
             <div class="form-group">
-                <label for="message">App suggestion:</label>
+                <label for="message">App, Theory or Method suggestions:</label>
                 <textarea class="form-control" id="message" name="message" rows="3"></textarea>
             </div>
             <div class="form-group">
@@ -56,8 +56,10 @@
 
             // Submits the form data to be captured by google doc
             submitForm(event) {
-                const remoteURL = "https://script.google.com/macros/s/AKfycbwdPK1Xn_XdIKYYnMLltp6u51nGpuRltLkwPvMUyLmMY1biPhpz/exec"
 
+                
+                const remoteURL = "https://script.google.com/macros/s/AKfycbwaxF3dAHwo3zE_7Z-DkT19KIU1x_FTxG9Ae4LuVecfyXbFVHA/exec"
+                
                 const isValidEmail = email => {
                     const re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
                     return re.test(email)

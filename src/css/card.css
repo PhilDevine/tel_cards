@@ -1,5 +1,7 @@
 /* GRID LAYOUTS */
 
+body{ overflow-x: hidden; overflow-y: hidden;}
+
 .card-holder {
     display: grid;
     grid-template-columns: auto;
@@ -49,12 +51,26 @@ p, h5, h6 {
     line-height: 1.6rem;
     margin-left: 5px;
     margin-right: 5px;
+    /*Phil change below not there in original */
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.card-text-ac {
+    line-height: 1.6rem;
+    margin-left: 5px;
+    margin-right: 5px;
+    /*Phil change below not there in original */
+    max-height: 200px;
+    overflow-y: auto;
+    font-size: 1.2rem;
 }
 
 .tool-link {
     font-size: 1.1rem;
     margin-left: 5px;
 }
+
 
 /* CARD FLIPPERS */
 
@@ -99,6 +115,19 @@ p, h5, h6 {
     /* END EDITABLE */
 }
 
+.titlebarfront-av {
+    display: grid;
+    /*grid-template-columns: 80px 1fr;*/
+    grid-template-rows: auto;
+    padding: 70px 0 20px 0;
+
+    /* EDITABLE */
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    /* END EDITABLE */
+}
+
 .smalllogo {
     width: 40px;
     height: 40px;
@@ -125,6 +154,13 @@ p, h5, h6 {
     width: 80%;
 }
 
+.apptitle-av {
+    color: #fff;
+    padding-top: 5px;
+    width: 90%;
+    padding-left: 24px;
+}
+
 /* TAGS SECTION */
 
 .details {
@@ -144,6 +180,7 @@ p, h5, h6 {
 
 .activity {
     text-transform: capitalize;
+    cursor: pointer;
 }
 
 .create {
@@ -174,6 +211,14 @@ p, h5, h6 {
     background-color: #90a4ae;
 }
 
+.theory {
+    background-color: #f06292;
+}
+
+.ctel {
+    background-color: #4dd0e1;
+}
+
 .sub {
     background-color: #90a4ae;
     padding: 5px;
@@ -183,6 +228,13 @@ p, h5, h6 {
     display: grid;
     grid-template-columns: 40px 1fr;
     margin: 20px 0 10px 0; 
+    padding: 0 25px 0 25px;
+}
+
+.submitter-ac {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    margin: 20px 0 0 0; 
     padding: 0 25px 0 25px;
 }
 
@@ -197,6 +249,11 @@ p, h5, h6 {
 .submitterschool {
     color: #999999;
 }
+
+.submitterschool-ac {
+    color: #fff;
+}
+
 
 /* EMBEDDED VIDEO */
 
@@ -226,6 +283,7 @@ p, h5, h6 {
     align-content: center;
     background-color: #353B40;
     color: #fff;
+    height:50px;
 }
 
 .frameworktext1,
@@ -277,8 +335,26 @@ p, h5, h6 {
     transform: rotateY(180deg);
 }
 
+.manual-flip-av .card {
+    background: transparent;
+}
+
+.manual-flip-av.hover .card {
+    transform: rotateY(180deg);
+}
+
 .app-card {
     transition: transform .5s;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.app-card-av {
+    transition: transform .0s;
     transform-style: preserve-3d;
     position: absolute;
     top: 0;
@@ -303,3 +379,47 @@ p, h5, h6 {
 .back {
     transform: rotateY(180deg);
 }
+
+.sub-button {
+   border: 0;
+   background:transparent;
+   color:white;
+   cursor: pointer;
+}
+.copy-url {
+   cursor: pointer;
+} 
+
+/* hide */
+
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.moveme {
+    position:absolute;
+    top: -1000px;
+}
+
+/* skip content */
+.skip {
+        position: absolute;
+        //top: -1000px;
+        //left: -1000px;
+        height: 1px;
+        width: 1px;
+        text-align: left;
+        overflow: hidden;
+    }
+    
+    a.skip:active, 
+    a.skip:focus, 
+    a.skip:hover {
+        left: 0; 
+        top: 0;
+        width: auto; 
+        height: auto; 
+        overflow: visible; 
+    }

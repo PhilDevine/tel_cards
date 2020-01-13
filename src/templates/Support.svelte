@@ -10,35 +10,14 @@
         <div class="contacts-nav">
             <ul class="nav nav-pills nav-fill" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#humss" role="tab" data-toggle="pill">Faculty of HumSS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#health" role="tab" data-toggle="pill">Faculty of Medicine and Health Sciences</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#naturalsciences" role="tab" data-toggle="pill">Faculty of Natural Sciences</a>
+                    <a class="nav-link active" href="#humss" role="tab" data-toggle="pill">Center for Technology Enhanced Learning</a>
                 </li>
             </ul>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane fade show active" id="humss">             
                     <br>
                     <div class="list-group">
-                        <a href="mailto:d.harding@keele.ac.uk?Subject=KLE%20Templates" class="list-group-item list-group-item-action"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Dan Harding</a>
-                        <a href="mailto:c.hallam@keele.ac.uk?Subject=KLE%20Templates" class="list-group-item list-group-item-action"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Cat Hallam</a>
-                        <a href="mailto:a.gater@keele.ac.uk?Subject=KLE%20Templates" class="list-group-item list-group-item-action"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Andy Gater (Language Centre)</a>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="health">
-                    <br>
-                    <div class="list-group">
-                        <a href="mailto:t.smale@keele.ac.uk?Subject=KLE%20Templates" class="list-group-item list-group-item-action"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Tim Smale</a>
-                        <a href="mailto:p.r.lonsdale@keele.ac.uk?Subject=KLE%20Templates" class="list-group-item list-group-item-action"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Pete Lonsdale (School of Nursing and Midwifery)</a>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="naturalsciences">
-                    <br>
-                    <div class="list-group">
-                        <a href="mailto:d.a.kerr@keele.ac.uk?Subject=KLE%20Templates" class="list-group-item list-group-item-action"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Daryl Kerr</a>
+                        <a href="mailto:p.devine@lancaster.ac.uk?Subject=cTel%Cards" class="list-group-item list-group-item-action"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Phil Devine</a>
                     </div>
                 </div>
             </div>

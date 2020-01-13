@@ -11,14 +11,47 @@ import cards from './cards.js'
 class AppStore extends Store {
 
 	// Method to load a random card (callable from any component)
-	loadRandomCard(currentCardId) {
+	loadRandomCard(currentCardId, a) {
+        //document.getElementById(card.id).title = "test test test";
+        document.getElementById("frontface").style.display = "block";
+
+        //card.testest();
 		// Remove current card so we don't randomly select it
 		const cards = this.get('cards').filter(card => card.id !== currentCardId)
         const card = cards[Math.floor(Math.random() * cards.length)]
         this.set({
 			currentCard: card.id,
 		})
+        
+        
 	}
+    // Method to load a StaticActivity (callable from any component) PhilD
+	loadStaticActivity(e) {
+    
+     var myClick = document.getElementById('filterText'); 
+     myClick.value = e;
+     myClick.addEventListener('change',function(){ 
+     this.store.set({ filter: e })
+     });  
+     myClick.dispatchEvent(new Event('change'));
+   
+     }
+    // Method to stop video ac
+     stopVideo() {
+
+       var myVideoac = document.getElementById("embedVideo-ac");
+       var myVideo = document.getElementById("embedVideo");
+         
+       if(myVideoac) {  
+       $(myVideoac).attr("src", $(myVideoac).attr("src"));
+       } 
+       if(myVideo) {  
+       $(myVideo).attr("src", $(myVideo).attr("src"));       
+       }
+         
+       }
+
+    
 }
 
 // Expand each of the 'activities' for each card to include the full information for that activity
@@ -31,14 +64,21 @@ cards.forEach(card => {
 		{ name: "collaborate", description: "A platform for collaboration and co-creation." },
 		{ name: "curate", description: "Collect, organise and share content." },
 		{ name: "capture", description: "Record an event, activity or artefact." },
+        { name: "theory", description: "Engage with Learning theory." },
+        { name: "ctel", description: "Centre for Technology Enhanced Learning" },
 	]
 	card.activities = card.activities.map(name => activities.find(activity => activity.name === name))
 })
 
+
+// add functioanlity of cardid in query string to view a unique card on reload and in first instance. PhilD
+const searchParams2 = new URL(document.location).searchParams
+const uniquecardid = searchParams2.get('cardid') ? searchParams2.get('cardid') : cards[Math.floor(Math.random() * cards.length)].id
+
 // Create the store with initial state
 const store = new AppStore({
 	cards,
-	currentCard: cards[Math.floor(Math.random() * cards.length)].id,
+	currentCard: uniquecardid,
 	currentPage: 'card',
 })
 

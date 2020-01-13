@@ -2,26 +2,27 @@ export default [
     
 
     {
-        id: "google-classroom",
-        name: "Google Classroom",
-        url: "https://classroom.google.com",
-        tagline: "Classroom allows educators to manage classes, set assignments and interact with students all in one place.",
-        description: "Classroom connects students and instructors using tools such as Google Docs, Calendar, Drive, and Forms to build a streamlined platform for learning. Teachers can create classes, distribute assignments, communicate and stay organized whilst students can see their assignments on their To-Do page, share resources and interact in the class stream.",
+        id: "thomas-ryberg-a",
+        name: "Professor Thomas Ryberg",
+        urltext: "Further reading",
+        url: "http://goo.gl/fDpmu8",
+        tagline: "Delivering  on  an  Online  UK  MBA  Coursein  Post-Soviet  Countries.",
+        description: "The first in a new series of lunch events “MEET & EAT” was successfully held on 24 October 2017. 16 of us met and discussed with Professor Thomas Ryberg about his recent article Understanding Nomadic Collaborative Learning Groups. We ate freshly wrapped burritos together and digested new ideas of how groups of students move back and forth between digital and physical spaces through creatively incorporating digital/non-digital technologies into their group work. Why don’t you come along next time?",
         colour: "#FDBC45",
         assets: {
             logo: {
                 styles: "",
-                image: require('./img/google_classroom.png')
+                image: require('./img/aau-logo_en.png')
             },
             cover: {
                 styles: "background-size: cover !important;",
-                image: require('./img/classroom_screenshot.jpg')
+                image: require('./img/Tom_ryberg.jpg')
             }
         },
         activities: [
-            "connect",
             "collaborate",
-            "curate"
+            "theory",
+            "ctel",
         ],
         uses: [
             "Assessment",
@@ -29,420 +30,99 @@ export default [
             "Feedback"
         ],
         submitter: {
-            name: "A Rhead",
-            title: "Learning Developer"
+            name: "Dr Kyungmee Lee",
+            title: "Lecturer in Technology Enhanced Learning"
         },
-        videoURL: "https://www.youtube.com/embed/UPgnim0Q5cs?rel=0&amp;showinfo=0?&cc_load_policy=1",
-        framework: {
-            enhance: "Set up a class and keep it organised by applying topics to posts. Structure materials by week, lesson, theme or assignment.",
-            empower: "Add learning resources in Google formats, amending sharing settings for students to edit or add comments.",
-            extend: "Use the Classroom stream to set up discussion topics or create quick polls that engage students inbetween lessons."
-        }
-    },
-    
-    {
-        id: "gdocs",
-        name: "Google Docs",
-        url: "https://google.com/docs/about",
-        tagline: "An online word processor that allows you to write, edit and collaborate wherever you are.",
-        description: "As part of GSuite (formerly Google Apps for Education), Google Docs is a simple but powerful word processing application that helps to create documents from any device. As well as familiar features for formatting and styling, Docs makes it possible to work together in real-time. Sharing files is easy too, with adjustable security settings that make emailing multiple copies of the same document a thing of the past.",
-        colour: "#5793EF",
-        assets: {
-            logo: {
-                styles: "background-color: #343A40; background-size: 20px; background-position: 50% 50%;",
-                image: require('./img/docs.png')
+        frameworkheaders: {
+            one: "point",
+            two: "context"
+        },
+        frameworkicons: {
+             one: "fa-hourglass-start",
+             two: "fa-hourglass-half",
+             three: "fa-hourglass-end"
             },
-            cover: {
-                styles: "background-color: #fff;",
-                image: require('./img/docs_background.png')
-            }
-        },
-        activities: [
-            "create",
-            "collaborate"
-        ],
-        uses: [
-            "Collaborative writing",
-            "Feedback",
-            "Workbooks"
-        ],
-        submitter: {
-            name: "M Davys",
-            title: "Senior Teaching Fellow in Law"
+        frameworktitles: {
+            one: "One",
+            two: "Two",
+            three: "Three"
         },
         videoURL: "https://www.youtube.com/embed/ns0U3zkHG7w?rel=0&amp;showinfo=0?&cc_load_policy=1",
         framework: {
-            enhance: "Convert a resource that would normally be given to students in a paper or static electronic format into a Google Doc and share it for students to annotate and make their own.",
-            empower: "Organise an 'edit-a-thon' where groups of students are encouraged to collaborate in real-time on a Google Doc to demonstrate their knowledge of a particular topic.",
-            extend: "Ask students to share their Google Doc and provide feedback by annotating and inserting comments that prompt further discussion or revisions to their original work."
+            commentary_a: "Thomas explains how he borrowed a pre-existing theoretical concept from another academic field and revised and used it in his work.",
+            commentary_b: "Thomas explains what Problem-Based Learning (or Project-based Learning, PBL) is and some of the underlying pedagogical principles of PBL.",
+            commentary_c: "Thomas explains how he has been using the PBL as a pedagogical theory, model, and framework in his own teaching context."
         }
     },
     
-    {
-        id: "medium",
-        name: "Medium",
-        url: "https://medium.com/",
-        tagline: "A blogging platform that makes writing and sharing posts simple.",
-        description: "Medium simplifies the writing process, producing great looking articles that are easily shared online. Become an author or show your appreciation for posts by using the applaud feature. Medium allows anybody to read, write and respond to stories, with licensing options that allow others to remix and reuse your posts. Found an article that needs more discussion? Write a reponse or highlight specific text and add comments inline.",
-        colour: "#000",
+        {
+        id: "ruslan-ramanau-a",
+        name: "Dr Ruslan Ramanau",
+        urltext: "Further reading",
+        url: "http://goo.gl/fDpmu8",
+        tagline: "Delivering online UK MBA Courses in Post-Soviet Countries",
+        description: "Dr Ruslan Ramanau from the Open University visited Lancaster for our second MEET & EAT event on 22 March, 2018. we met and talked about his new article Delivering an online UK MBA Courses in Post-Soviet Countries. We ate freshly wrapped burritos together and discussed the challenging nature of integrating  Western management knowledge and education into this unique cultural, political, and economic setting. It was indeed interesting to listen to Ruslan talking about his own experiences with delivering the UK MBA course in Russia.",
+        colour: "#5793EF",
         assets: {
             logo: {
-                styles: "background-color: #000; background-size: 30px; background-position: 50% 60%; border: 3px solid #000;",
-                image: require('./img/medium.png')
-            },
-            cover: {
                 styles: "",
-                image: require('./img/medium_logo.png')
-            }
-        },
-        activities: [
-            "create",
-            "check"
-        ],
-        
-        uses: [
-            "Blogging",
-            "Discussion",
-            "Portfolios",
-            "Reflection"
-        ],
-        submitter: {
-            name: "T Maurice",
-            title: "Digital Communications Officer"
-        },
-        videoURL: "https://www.youtube.com/embed/U0QOonYmDuU?rel=0&amp;showinfo=0?&cc_load_policy=1",
-        framework: {
-            enhance: "Start a module blog, writing occasional articles that summarise topics or respond to a related post from another source or Medium author.",
-            empower: "Encourage students to respond to your article, asking questions inline or offering their own thoughts. Responses do not have to made public.",
-            extend: "Set a reflective task that asks students to write their own posts, either keeping to the same topic or setting a new theme. Add their posts to a class publication."
-        }
-    },
-    
-    {
-        id: "mentimeter",
-        name: "Mentimeter",
-        url: "https://www.mentimeter.com",
-        tagline: "An online polling tool that encourages audience participation.",
-        description: "Energise presentations and make lectures more interactive by building informal quizzes and polls that students can respond to using any Internet connected device. Live results are displayed on-screen or hidden until the presenter chooses to reveal them. Great for formative feedback and to monitor understanding.",
-        colour: "#00a5bd",
-        assets: {
-            logo: {
-                styles: "background-color: #00a5bd",
-                image: require('./img/mentimeter.png')
-            },
-            cover: {
-                styles: "",
-                image: require('./img/mentimeter_logo.jpg')
-            }
-        },
-        activities: [
-            "create",
-            "captivate",
-            "check"
-        ],
-        uses: [
-            "Assessment",
-            "Polls",
-            "Quizzes",
-            "Feedback"
-        ],
-        submitter: {
-            name: "Dr C Little",
-            title: "Learning Developer"
-        },
-        videoURL: "https://www.youtube.com/embed/f1s7UhcIA7I?rel=0&amp;showinfo=0?&cc_load_policy=1",
-        framework: {
-            enhance: "Plan an icebreaker activity that poses a quick quiz to help gauge students prior knowledge and to introduce topics that are due to be covered.",
-            empower: "Integrate your slides with Mentimeter and use Reactions to help indicate when students are ready to move on or don't understand.",
-            extend: "Create a short answer question that asks students to suggest revision topics. Turn the answers into a poll and use it to inform the next session's content."
-        }
-    },
-
-    {
-        id: "office-lens",
-        name: "Office Lens",
-        url: "https://twitter.com/msofficelens",
-        tagline: "Capture images of whiteboards and documents to make them into readable learning resources.",
-        description: "Simply put, Office Lens puts a scanner in your pocket. Frame your shot, shoot from any angle, and like magic, it digitises notes from whiteboards or physical documents for you to easily tidy up. Office Lens uses optical character recognition (OCR) to recognise and convert static images into searchable, editable documents such as Word or PDF. Never lose your sticky notes again!",
-        colour: "#D83C18",
-        assets: {
-            logo: {
-                styles: "background-size: 40px; background-position: 50% 20%;",
-                image: require('./img/officelens.jpg')
+                image: require('./img/ou.png')
             },
             cover: {
                 styles: "background-size: cover !important;",
-                image: require('./img/officelens_background.jpg')
+                image: require('./img/ruslan_ramanau.jpg')
             }
         },
         activities: [
-            "create",
-            "capture"
-        ],
-        uses: [
-            "Notetaking",
-            "Annotating",
-            "Documenting"
-        ],
-        submitter: {
-            name: "K Beaumont",
-            title: "Learning Developer"
-        },
-        videoURL: "https://www.youtube.com/embed/s5_giVIUWr4?rel=0&amp;showinfo=0?&cc_load_policy=1",
-        framework: {
-            enhance: "Share images of whiteboard notes with students after class, or encourage them to capture their own and use as a revision resource later on.",
-            empower: "Encourage students to take pictures of their written notes and use them as a starting point for wider research and to add to more detailed, typed notes.",
-            extend: "Using their captured notes, ask students to create quizzes and test each other's knowledge and understanding of topics covered in class."
-        }
-    },
-
-    {
-        id: "padlet",
-        name: "Padlet",
-        url: "https://www.padlet.com",
-        tagline: "Padlet creates digital noticeboards that make sharing and collaborating easy.",
-        description: "Padlet provides a flexible digital canvas to add a variety of content. Drag in a video, snap a picture, write text posts or upload documents! Make it even more individual by choosing custom wallpapers and themes. Padlets can be selectively shared and edited among multiple contributors, in real time.",
-        colour: "#FF4A76",
-        assets: {
-            logo: {
-                styles: "background-color: #202338;",
-                image: require('./img/padlet.jpg')
-            },
-            cover: {
-                styles: "",
-                image: require('./img/padlet_logo.png')
-            }
-        },
-        activities: [
-            "create",
             "collaborate",
-            "curate"
+            "theory",
+            "ctel",
         ],
         uses: [
-            "Mindmapping",
-            "Presentation",
+            "Assessment",
             "Discussion"
         ],
         submitter: {
-            name: "T Hinchcliffe",
-            title: "Head of Student Learning & Development"
+            name: "Dr Kyungmee Lee",
+            title: "Lecturer in Technology Enhanced Learning"
         },
-        videoURL: "https://www.youtube.com/embed/P9CJauuNw8c?rel=0&amp;showinfo=0?&cc_load_policy=1",
-        framework: {
-            enhance: "Ask students to engage with a lecture topic by adding their thoughts and questions onto a Padlet wall, forming the basis for a discussion.",
-            empower: "Pre-load a collection of resources onto a Padlet wall and ask students to critique them, sharing their responses as comments underneath.",
-            extend: "Collect feedback and take questions from students by maintaining a Padlet wall throughout the semester. Tidy and share it with future cohorts."
-        }
-    },
-
-    {
-        id: "pinterest",
-        name: "Pinterest",
-        url: "https://www.pinterest.com",
-        tagline: "Upload, save and manage visual content (e.g. images and video) via collections known as pinboards.",
-        description: "Pinterest is a visual bookmarking tool that helps discover and save creative ideas. Known as pins, images and videos can be saved and categorised into collections (pinboards) that can be kept private or shared online. Pinboards can be split into sections and made collaborative, allowing others to add content. Pinterest's bookmarking tool can also quickly save content from the web.",
-        colour: "#BD081C",
-        assets: {
-            logo: {
-                styles: "background-color: #BD081C; background-size: 30px; background-position: 50% 25%;",
-                image: require('./img/pinterest.png')
+        frameworkheaders: {
+            one: "Point",
+            two: "Context"
+        },
+        frameworkicons: {
+             one: "fa-hourglass-start",
+             two: "fa-hourglass-half",
+             three: "fa-hourglass-end"
             },
-            cover: {
-                styles: "background-size: cover !important;",
-                image: require('./img/pinterest_logo.jpg')
-            }
+        frameworktitles: {
+            one: "One",
+            two: "Two",
+            three: "Three"
         },
-        activities: [
-            "create",
-            "collaborate",
-            "curate"
-        ],
-        uses: [
-            "Bookmarking",
-            "Collating",
-            "Researching"
-        ],
-        submitter: {
-            name: "Dr E de Quincey",
-            title: "Senior Lecturer in Computing"
-        },
-        videoURL: "https://www.youtube.com/embed/qFdxRkYldT8?rel=0&amp;showinfo=0?&cc_load_policy=1",
+        videoURL: "https://www.youtube.com/embed/U0QOonYmDuU?rel=0&amp;showinfo=0?&cc_load_policy=1",
         framework: {
-            enhance: "Use a pinboard to curate and share visual content with students. Collate media relevant to the module/topic being taught.",
-            empower: "Open up the module pinboard for contributions and ask students to pin media they think relevant. Ask them to discuss/critique their choices.",
-            extend: "In groups, encourage students to create a collaborative pinboard. Assess it as a virtual poster, requiring a narrative that explains their choices and how it relates to a particular topic."
-        }
-    },
-
-    {
-        id: "pocket",
-        name: "Pocket",
-        url: "https://www.getpocket.com",
-        tagline: "A social bookmarking tool that saves web content across all of your devices.",
-        description: "Pocket saves and organises interesting articles, videos and other web content so you can return to it later. Once saved, your personalised library is available on any device, from anywhere — even offline. Easily share items via email or post them to Twitter and Facebook for others to discover.",
-        colour: "#EF3E56",
-        assets: {
-            logo: {
-                styles: "background-size: 40px; background-position: 50% 30%; border: solid 3px #fff;",
-                image: require('./img/pocket.png')
-            },
-            cover: {
-                styles: "",
-                image: require('./img/pocket_logo.png')
-            }
-        },
-        activities: [
-            "curate"
-        ],
-        uses: [
-            "Bookmarking",
-            "Collating",
-            "Researching"
-        ],
-        submitter: {
-            name: "Dr J Herbert",
-            title: "Senior Lecturer in Politics"
-        },
-        videoURL: "https://biteable.com/watch/embed/video-placeholder-1602227/9a0c58e895f0d2a844c91c1718fb40c2786b47d1?autoplay=1",
-        framework: {
-            enhance: "Begin building a reading list by installing Pocket on your devices, including the add-on available for most modern web browsers (e.g. Google Chrome).",
-            empower: "Start using tags and favourites to organise your list. Tags can be applied to multiple items to build categorised sub-lists.",
-            extend: "Set up a module Twitter account or use a hashtag (e.g. #HUM1020) to start sharing articles with students from your Pocket reading list."
-        }
-    },
-
-    {
-        id: "quizlet",
-        name: "Quizlet",
-        url: "https://www.quizlet.com",
-        tagline: "Find or create sets of flashcards that can easily be converted into a range of interactive activities.",
-        description: "Quizlet is a flexible tool that quickly adapts flashcards into engaging, fun activities. Search existing materials or create and share new study sets to give students more choice in how they engage with their learning.",
-        colour: "#4257B2",
-        assets: {
-            logo: {
-                styles: "background-color: #4257B2",
-                image: require('./img/quizlet.png')
-            },
-            cover: {
-                styles: "",
-                image: require('./img/quizlet_logo.jpg')
-            }
-        },
-        activities: [
-            "create",
-            "collaborate",
-            "captivate",
-            "check"
-        ],
-        uses: [
-            "Flashcards",
-            "Quizzes",
-            "Researching"
-        ],
-        submitter: {
-            name: "Dan Harding",
-            title: "Learning Technology Officer"
-        },
-        videoURL: "https://biteable.com/watch/embed/video-placeholder-1602227/9a0c58e895f0d2a844c91c1718fb40c2786b47d1?autoplay=1",
-        framework: {
-            enhance: "Find a relevant study set and offer it to students as an additional resource to test their knowledge inbetween classes.",
-            empower: "Create an original study set based on concepts covered in class and export it as a worksheet for re-capping later on.",
-            extend: "Make and share a study set with deliberate mistakes for students to copy and self-correct. Follow up with a discussion to check answers."
-        }
-    },
-
-    {
-        id: "snagit",
-        name: "Snagit",
-        url: "http://www.snagit.com",
-        tagline: "Capture screenshots or record video to visually explain anything from your screen.",
-        description: "Snagit is an all-in-one tool for image and video capture, making it easy to create a variety of learning resources. For example, produce step-by-step tutorials, short introductory videos or annotated images. Snagit's integrated editor simplifies the process by providing a range of professional markup options.",
-        colour: "#2C72B7",
-        assets: {
-            logo: { 
-                styles: "background-color: #2C72B7; background-size: 32px; background-position: 50% 25%; border: solid 3px #fff;",
-                image: require('./img/snagit.png')
-            },
-            cover: {
-                styles: "background-size: cover !important;",
-                image: require('./img/snagit_logo.jpg')
-            }
-        },
-        activities: [
-            "create",
-            "capture"
-        ],
-        uses: [
-            "Screencasting",
-            "Annotating",
-            "Editing"
-        ],
-        submitter: {
-            name: "E Tennant",
-            title: "English Language Teaching Fellow"
-        },
-        videoURL: "https://biteable.com/watch/embed/video-placeholder-1602227/9a0c58e895f0d2a844c91c1718fb40c2786b47d1?autoplay=1",
-        framework: {
-            enhance: "Record and upload a short video that introduces yourself, the topics you'll be covering and what assessments to expect.",
-            empower: "Narrate a recommended text (e.g. journal article), identifying key points to promote skills that students can apply in their wider reading.",
-            extend: "Use Snagit to record audiovisual feedback based on anonymised draft submissions to help resolve common assignment issues."
-        }
-    },
-
-    {
-        id: "socrative",
-        name: "Socrative",
-        url: "https://www.socrative.com",
-        tagline: "An app that encourages student participation via online polls and quizzes for real time feedback.",
-        description: "Engage students with Socrative, an app that helps to build activities that provide feedback as learning happens. Launch pre-prepared quizzes or ask ad-hoc questions to quickly assess students and get immediate insights into their understanding at class, individual or question level. Automatically populated results visualise feedback, either to be shared with the class or collected anonymously by the tutor.",
-        colour: "#8EB4CF",
-        assets: {
-            logo: {
-                styles: "background-color: #ffffff; background-size: 30px; background-position: 50% 60%; border: 3px solid #ffffff;",
-                image: require('./img/socrative.png')
-            },
-            cover: {
-                styles: "",
-                image: require('./img/socrative_logo.png')
-            }
-        },
-        activities: [
-            "create",
-            "captivate",
-            "check"
-        ],
-        uses: [
-            "Assessment",
-            "Polls",
-            "Quizzes",
-            "Feedback"
-        ],
-        submitter: {
-            name: "Dr R Leach",
-            title: "Head of Social Science and Public Policy"
-        },
-        videoURL: "https://biteable.com/watch/embed/video-placeholder-1602227/9a0c58e895f0d2a844c91c1718fb40c2786b47d1?autoplay=1",
-        framework: {
-            enhance: "Design a short quiz using different question types to informally check students understanding during a lecture or seminar.",
-            empower: "Ask students to work in pairs or small groups to discuss their answers before responding to the quiz. Use a 'Space Race' for added competitiveness.",
-            extend: "Download the feedback report and identify areas which students had difficulty with. Use it to recap topics or inform future learning design."
+            commentary_a: "Learning experiences of international students in the MBA course should be understood in their own professional context in their own countries.",
+            commentary_b: "Exposure to Western theories, despite their discrepancy with students’ own practice, were seen as useful for students’ self- or career enhancement.",
+            commentary_c: "The effective localisation of the UK courses can help international students to think more deeply and reflectively of themselves and their practice."
         }
     },
     
-    {
+     {
         id: "zeetings",
-        name: "Zeetings",
+        name: "zeetings",
+        urltext: "www.zeetings.com",
         url: "https://www.zeetings.com",
         tagline: "Combine slides, multimedia content, polls and Q&A features into interactive presentations.",
         description: "Zeetings helps to create engaging presentations by combining a range of interactive tools into an easy to use interface. Add existing slides or use Zeetings to create brand new presentations, quickly embedding videos, polls and surveys. A Zeeting is interactive, so share with students to receive real time feedback and questions. With in-built analytics, responses are saved automatically to repurpose outside of the classroom.",
-        colour: "#2BA0D8",
+        colour: "#8EB4CF",
         assets: {
             logo: {
-                styles: "background-color: #343A40; background-size: 20px; background-position: 50% 50%;",
+                styles: "",
                 image: require('./img/zeetings.png')
             },
             cover: {
-                styles: "",
+                styles: "background-size: cover !important;",
                 image: require('./img/zeetings_logo.png')
             }
         },
@@ -458,14 +138,29 @@ export default [
             "Feedback"
         ],
         submitter: {
-            name: "J Preston",
-            title: "Lecturer in Midwifery"
+            name: "P Devine",
+            title: "Digital Learning Facilitator"
+        },
+        frameworkheaders: {
+            one: "Level",
+            two: "Example Activities"
+        },
+        frameworkicons: {
+             one: "fa-thermometer-quarter",
+             two: "fa-thermometer-half",
+             three: "fa-thermometer-full"
+            },
+        frameworktitles: {
+            one: "Enhance",
+            two: "Empower",
+            three: "Extend"
         },
         videoURL: "https://www.youtube.com/embed/qKsY_083uOk?rel=0&amp;showinfo=0?&cc_load_policy=1",
         framework: {
-            enhance: "Import a previous presentation (e.g. PowerPoint) and add some interactive slides that will test student's comprehension during the session.",
-            empower: "Introduce students to the Q&A feature. Ask them to pose questions anonymously and vote on which ones they think should be answered first.",
-            extend: "Use Zeetings' analytics feature to export all questions and allocate a revision task that requires students to present back an answer at the next class."
+            commentary_a: "Import a previous presentation (e.g. PowerPoint) and add some interactive slides that will test student's comprehension during the session.",
+            commentary_b: "Introduce students to the Q&A feature. Ask them to pose questions anonymously and vote on which ones they think should be answered first.",
+            commentary_c: "Use Zeetings' analytics feature to export all questions and allocate a revision task that requires students to present back an answer at the next class."
         }
     }
+
 ]

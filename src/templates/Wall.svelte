@@ -3,7 +3,7 @@
     <div class="wall-filter">
         <div class="selector">
             <select id="filterText" class="btn btn-secondary dropdown-toggle btn-lg btn-block transformer" on:change="set({ filter: event.target.value })">
-                <option selected value="all">Find an app to...</option>
+                <option selected value="all">Find a card to...</option>
                 <option value="create">...create learning resources</option>
                 <option value="connect">...communicate with students electronically</option>
                 <option value="collaborate">...act as a platform for collaboration</option>
@@ -11,17 +11,18 @@
                 <option value="capture">...record an event or artefact</option>
                 <option value="captivate">...create interactive learning opportunities</option>
                 <option value="check">...gauge students understanding</option>
-                <option value="all">All apps</option>
+                <option value="theory">...engauge with learning theory</option>
+                <option value="ctel">...centre for technology enhanced learning</option>
+                <option value="all">All cards</option>
             </select>
         </div>
         <button class="btn btn-lg btn-outline-secondary" id="collapser" type="button" onclick="document.getElementsByClassName('wall-misc')[0].classList.toggle('collapsed'); document.getElementsByClassName('fa-chevron-right')[0].classList.toggle('fa-rotate-180');"><i class="fas fa-chevron-right" id="collapser-icon"></i></button>
     </div>
 
     <div class="instructions">
-        <i class="fas fa-map-signs" aria-hidden="true"></i>&nbsp;<p>Browse the wall to find out what technologies are available for learning and teaching. <strong>Found something you're interested in?</strong> Use the <strong>Support</strong> tab for details on who to speak to for ideas and support.</p>
+        <i class="fas fa-map-signs" aria-hidden="true"></i>&nbsp;<p>Browse the wall to find out what topics are available to you. <strong>Found something you're interested in?</strong> Use the <strong>Support</strong> tab for details on who to speak to for ideas and support.</p>
     </div>
-
-    <div class="wall-cards">
+<div class="wall-cards">
         <!-- <div class="row">     -->
             {{#each filteredCards as card}}
                 <div class="card-item">
@@ -68,14 +69,20 @@
 	import Contribute from './Contribute.svelte'
     import Support from './Support.svelte'
 	import About from './About.svelte'
+    
 
     export default {
-        
+        //new phil d start
+        oncreate() {
+        $('[data-toggle="tooltip"]').tooltip({container: '.wall-cards'})
+        },
+        // new phild end
         // Set the initial filter state to show all cards
         data() {
             return {
                 filter: 'all'
             }
+            
         },
 
         // Expose the templates as components that can be referened in this template

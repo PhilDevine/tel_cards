@@ -9,7 +9,7 @@
         </div>
         <div class="dropdown">
             <select id="filterText" class="btn btn-secondary dropdown-toggle btn-block" on:change="set({ filter: event.target.value })">
-                <option selected value="all">Find an app to...</option>
+                <option selected value="all">Find a card to...</option>
                 <option value="create">...create learning resources</option>
                 <option value="connect">...communicate with students electronically</option>
                 <option value="collaborate">...act as a platform for collaboration</option>
@@ -17,7 +17,9 @@
                 <option value="capture">...record an event or artefact</option>
                 <option value="captivate">...create interactive learning opportunities</option>
                 <option value="check">...gauge students understanding</option>
-                <option value="all">All apps</option>
+                <option value="theory">...engauge with learning theory</option>
+                <option value="ctel">...centre for technology enhanced learning</option>
+                <option value="all">All cards</option>
             </select>
         </div>
         <div class="card cataloguepane" data-spy="scroll">

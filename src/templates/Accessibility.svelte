@@ -1,111 +1,127 @@
-<div class="manual-flip {{flipped ? 'hover' : ''}}">
+<div class="manual-flip-av {{flipped ? 'hover' : ''}}">
     <style type="text/css">
         .{{ card.id }} .cardflipper, .nextcard:hover {
             background-color: {{ card.colour }};
         }
-        .{{ card.id }} .titlebarfront {
+        .{{ card.id }} .titlebarfront-av {
             background: linear-gradient(
                 rgba(52, 58, 64, 0.9) 0%, 
                 rgba(52, 58, 64, 0.9) 95%
-            ), url(.{{card.assets.cover.image }});
+            );
             {{ card.assets.cover.styles }}
         }
         .{{ card.id }} .smalllogo {
-            background-image: url(.{{ card.assets.logo.image }});
+            background-image: url({{ card.assets.logo.image }});
             {{ card.assets.logo.styles }}
         }
     </style>
     
-    <div id="content" class="card-container">
-        <div class="app-card card noborder {{ card.id }}">
-            <div class="front face">
-                <div class="cardflipper" role="button" on:click="rotateCardFront(card.videoURL,card.id)">
-                    <div><i class="fas fa-redo-alt" aria-hidden="true"></i> 
-                    Flip card
-                    </div>
-                </div>
-                <div class="titlebarfront">
-                    <a class="smalllogo faa-tada animated-hover" href="{{ card.url }}" target="_blank">
-                    </a>
-                    <div class="apptitle">
-                    <h5>{{ card.name }}</h5>
-                    <h6>{{ card.tagline }}</h6>
+    <div class="card-container">
+        <div class="app-card-av card noborder {{ card.id }}">
+      
+        
+            <div id="frontface" class="front face">
+
+<!--<div class="cardflipper" role="button" on:click="rotateCardFrontav(card.videoURL,card.ids)">-->
+
+<div class="cardflipper" role="button"  title="select to access back for card" on:click="rotateCardFrontav(card.videoURL,card.id)">
+
+<div>
+<i class="fas fa-redo-alt" aria-hidden="false"></i>
+<button class="sub-button" title="select to access information on back of card">Flip card</button>
+</div>
+
+</div>
+                <div class="titlebarfront-av">
+                    <div class="apptitle-av">
+                    <h1>{{ card.name }}</h1>
+                    <h2>{{ card.tagline }}</h2>
                     </div>
                 </div>
                 <div class="card-body">
-                    <p class="card-text">{{ card.description }}</p>
+
+                    <p class="card-text-ac">{{ card.description }}</p>
                     <a class="tool-link" href="{{ card.url }}" target="_blank">{{ card.urltext }}</a>
-                    <button id="copybtn" on:click="copycardurl(this.name)" style="float:right;" data-toggle="tooltip" name="{{ card.id }}" title="Click to copy this cards unique URL to your clipboard" aria-hidden="true">copy url</button>
-                    <input type="text" style="position: absolute;left: -1000px;" value="https://www.lancaster.ac.uk/staff/devinep/ctel/?cardid={{ card.id }}" id="copyurl_{{ card.id }}">
+                    <button id="copybtnac" class="copy-url" on:click="copycardurlac(this.name)" style="float:right;" data-toggle="" name="{{ card.id }}" title="Click to copy this cards unique URL to your clipboard" aria-hidden="false">copy url</button>
+                    <input class="" aria-hidden="true" type="text" style="position: absolute;left: -2000px;" value="https://www.lancaster.ac.uk/staff/devinep/ctel/?cardid={{ card.id }}" id="copyurlac_{{ card.id }}">
                 </div>
                 <div class="details">
-                    <div class="pills-main">
-                        <h5>
+                    <div class="pills-main" title="tags area: activities or subjects domains this card support">
+
+<h3>
                         
-                            {{#each card.activities as activity, i}}
+{{#each card.activities as activity, i}}
                             
-                            <!-- Phild change -->
-                            <span id="mytag" style="display:none;">{{card.activities[i].name}}</span>
+<!-- Phild change -->
+<span id="mytag" style="display:none;">{{card.activities[i].name}}</span>
     
-                            <span id="{{ card.id }}_{{ card.activities[i].name }}" value="{{ card.activities[i].description }}" role="button" on:click="getTagCat(event)" on:mouseover="settooltip(this.id)" class="badge activity {{ activity.name }}" data-toggle="tooltip" data-placement="top" name="{{ activity.name }}" title="{{ activity.description }}" aria-hidden="true">{{ activity.name }}</span>&nbsp;
+<span id="{{ card.id }}_{{ card.activities[i].name }}" value="{{ card.activities[i].description }}" on:click="getTagCat(event)" class="badge activity {{ activity.name }}" data-toggle="" data-placement="top" name="{{ activity.name }}" title="{{ activity.description }}" aria-hidden="true">
+<button class="sub-button" title="tag name is {{ activity.name }} select to move to card Catalogue">{{ activity.name }}</button>
+</span>&nbsp;
                             {{/each}}
-                            <i class="far fa-question-circle" data-toggle="tooltip" data-placement="top" title="Activities this app supports" aria-hidden="true"></i>
-                        </h5>
+<i class="far fa-question-circle" data-toggle="" data-placement="top" title="activities or subjects domains this card support" aria-hidden="true"></i>
+
+</h3>
+
                     </div>
                     <div class="pills-sub">
+                    <H4>
                         {{#each card.uses as use}}
                         <span class="badge sub">{{ use }} </span>&nbsp;
                         {{/each}} 
-                        <i class="far fa-question-circle" data-toggle="tooltip" data-placement="top" title="Examples of how this app can be used" aria-hidden="true"></i>
+                        <i class="far fa-question-circle" data-toggle="" data-placement="top" title="Examples of how this app can be used" aria-hidden="true"></i>
+                    </H4>
                     </div>
-                    <div class="submitter">
+                    
+                    <div class="submitter-ac">
                         <div class="submitterimg">
                             <i class="far fa-user" aria-hidden="true"></i>
                         </div>
+                        
                         <div class="submitterinfo">
-<p class="small"><b>Submitted by</b><br>{{ card.submitter.name }}<span class="submitterschool">&nbsp;| {{ card.submitter.title }}</span></p>
+<p class="small"><b>Submitted by</b><br>{{ card.submitter.name }}<span class="submitterschool-ac">&nbsp;| {{ card.submitter.title }}</span></p>
                         </div>
                     </div>
                 </div>
                 <div class="nextcard" role="button" on:click="store.loadRandomCard(card.id, card.activities)">
-                    <div><i class="fas fa-magic" aria-hidden="true"></i>&nbsp;&nbsp;Try another card</div>
+                    <div><i class="fas fa-magic" aria-hidden="true"></i>
+                    &nbsp;&nbsp;<button class="sub-button" title="Random selection, select to Try another card">Try another card</button>
+                    </div>
                 </div>
             </div>
             
             <!-- End front panel -->
 
-            <div class="back face">
-                <div class="cardflipper" role="button" on:click="rotateCardBack()">
-                    <div><i class="fas fa-redo-alt" aria-hidden="true"></i> Flip back</div>
+            <div id="backface" class="back face hide">
+                <div class="cardflipper" role="button" on:click="rotateCardBackav()">
+                    <div><i class="fas fa-redo-alt" aria-hidden="false"></i> 
+<button class="sub-button" title="select to access information on front of card">Flip card</button>
+                    </div>
                 </div>
-
-
+                
+                
                 <div class="mediabackground">
                     <div class="videocontainer">
                         <div class="embed-responsive embed-responsive-16by9">
-<iframe id="embedVideo" class="embed-responsive-item youtube" src="{{ card.videoURL }}" frameborder="0" allowfullscreen></iframe>
+                            <iframe id="embedVideo-ac" class="embed-responsive-item youtube" src="{{ card.videoURL }}" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div> 
                 
                 
-                
-   <!--             
+ <!--               
                 <div class="mediabackground">
                     <div class="videocontainer">
-                        
                         <div class="embed-responsive embed-responsive-16by9">
                         
 <video id="id-{{ card.id }}" class="embed-responsive-item" controls>
 <source id="srcCardVideo" src="{{ card.videoURL }}" type="video/mp4">
 </video>
                 </div>
-                
+                </div>
                 </div>
                 
-                </div>
-                
-    -->            
+ -->               
                 
                 <div class="frameworkheading">
                     <p class="frameworktext1">{{card.frameworkheaders.one}}</p>
@@ -135,7 +151,7 @@
                     </div>
                 </div>
                 <div class="nextcard" role="button" on:click="store.loadRandomCard(card.id)">
-                    <div><i class="fas fa-magic" aria-hidden="true"></i>&nbsp;&nbsp;Try another card</div>
+                    <div><i class="fas fa-magic" aria-hidden=""></i>&nbsp;&nbsp;<button class="sub-button" title="Random selection, select to Try another card">Try another card</button></div>
                 </div>
             </div> <!-- End back panel -->
         </div> <!-- End of card -->
@@ -152,7 +168,7 @@
                 // Child is positioned absolutely, so this forces container to fill height of child on re-render
                 setTimeout(() => {
                     $(function () {
-                    $('[data-toggle="tooltip"]').tooltip()
+                    //$('[data-toggle="tooltip"]').tooltip()
                     //$('[data-toggle="tooltip"]').tooltip({container: '.wall-cards'})
                     });
                 }, 20)
@@ -171,13 +187,18 @@
         },
 
         methods: {
-            rotateCardFront(e,i) {
+            rotateCardFrontav(e,i) {
+
+                document.getElementById("frontface").style.display = "none";
+                document.getElementById("backface").style.display = "block";
                 this.set({ flipped: !this.get('flipped') });
                 document.getElementById("srcCardVideo").src = e;
                 document.getElementById("id-"+i).load();
-            },
-                rotateCardBack() {
+                //this.set({ flipped: true });
                 
+            },
+            rotateCardBackav() {
+
 var myVideoac = document.getElementById("embedVideo-ac");
 var myVideo = document.getElementById("embedVideo");
 if(myVideoac) {
@@ -187,16 +208,13 @@ if(myVideo) {
 $(myVideo).attr("src", $(myVideo).attr("src"));
 }
 
-                
-                
-                
-                
-                this.set({ flipped: !this.get('flipped') })
+                document.getElementById("backface").style.display = "none";
+               document.getElementById("frontface").style.display = "block";
+               this.set({ flipped: !this.get('flipped') });
             },
-            copycardurl(n) {
-            var copyText = document.getElementById("copyurl_"+n);
-            
-            copyText.select();
+            copycardurlac(n) {
+            var copyTextac = document.getElementById("copyurlac_"+n);
+            copyTextac.select();
             document.execCommand("copy");
             },
             getTagCat(e) {
@@ -212,8 +230,9 @@ $(myVideo).attr("src", $(myVideo).attr("src"));
             settooltip(e) {
             var myID = "#"+e;
             var title = $("#"+e).attr("value");
-            $(myID).tooltip('hide').attr('data-original-title', title).tooltip('show');
+            //$(myID).tooltip('hide').attr('data-original-title', title).tooltip('show');
             },
+
             
         }
 
